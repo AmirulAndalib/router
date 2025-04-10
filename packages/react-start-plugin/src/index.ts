@@ -21,8 +21,9 @@ export const clientDistDir = 'node_modules/.tanstack-start/client-dist'
 export function TanStackStartVitePlugin(
   opts?: TanStackStartInputConfig & WithReactPlugin,
 ): Array<PluginOption> {
-  type OptionsWithReact = ReturnType<typeof getTanStackStartOptions> & WithReactPlugin;
-  const options: OptionsWithReact = getTanStackStartOptions(opts);
+  type OptionsWithReact = ReturnType<typeof getTanStackStartOptions> &
+    WithReactPlugin
+  const options: OptionsWithReact = getTanStackStartOptions(opts)
 
   return [
     {
